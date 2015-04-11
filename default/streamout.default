@@ -1,0 +1,17 @@
+
+streamOutKeys = list(nil
+	'userSkillFile             ""
+	'layerTable                ""
+	'convertPin                "geometry"
+	'libVersion                "5.0"
+	'units                     "micron"
+	'scale                     0.001
+	'cellMapTable              ""
+	'caseSensitivity           "preserve"
+	'errFile                   "GDSOUT_ERR_FILE"
+	'outFile                   "GDSOUT_FILE"
+	'viewName                  "layout"
+	'primaryCell               "TOP_MODULE"
+	'libName                   "LIBRARY_NAME"
+	'runDir                    "GDSRUN_DIR"
+)

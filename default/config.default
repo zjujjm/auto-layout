@@ -1,0 +1,20 @@
+# File name: config.default
+#
+# Configuration file for Auto-Layout Toolkit
+# PATH Setting for makefile
+# MUST Set-up
+TOP_MODULE = defaultModule
+LVS_SOURCE_MODULE = $(TOP_MODULE)
+# --
+RVE_SETUP_FILE = rve.default
+DRC_RESULT_DIR = $(AL_ROOT_DIR)/result/drcresult
+LVS_RESULT_DIR = $(AL_ROOT_DIR)/result/lvsresult
+ERC_RESULT_DIR = $(AL_ROOT_DIR)/result/ercresult
+CDL_DIR = $(AL_ROOT_DIR)/CDL
+GDS_DIR = $(AL_ROOT_DIR)/GDS
+# Configuration for GDS out
+GDSOUT_ERR_FILE = $(TOP_MODULE).log
+GDSOUT_FILE = $(GDS_DIR)/$(TOP_MODULE).gds
+GDSRUN_DIR = $(GDS_DIR)
+# Configuration for CDL out
+CDLOUT_FILE = $(CDL_DIR)/$(TOP_MODULE).cdl

@@ -1,0 +1,21 @@
+# File name: config
+#
+# Configuration file for Auto-Layout Toolkit
+# User configuration, rule files, directory, etc.
+
+AL_ROOT_DIR=
+
+LIBRARY_PATH=
+LIBRARY_NAME=
+
+# No spacing here, absolute path for DRC
+DRC_RULE_1=
+DRC_RULE_2=
+DRC_RULE_4=
+DRC_RULE_3=
+
+LVS_RULE=
+
+CDL_INCLUDE=
+
+ISIC615=1

@@ -1,0 +1,16 @@
+*layoutServerPort: 8885
+*layoutServer: Cadence:Virtuoso
+*cmnMainWinGeom: 1030x869+333+147
+*cmnShowInfo: 1
+*cmnViewName: View-1428753004712449
+*drcExploreSortColumn: {Results {Check / Cell}}
+*drcExploreSortDirection: {Results up}
+*drcExploreTreeHeight: 263
+*drcLastViewedHierarchy: Check Cell
+*drcRveWinPos: last
+*drcShowEmptyChecks: 0
+*drcView: Icon
+*drcViewByCell: 0
+*drcViewCellCoords: 0
+*lvsRveWinPos: last
+
