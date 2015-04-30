@@ -1,5 +1,8 @@
 #!/bin/bash
 # Run RVE to see DRC and LVS result
+# V2: 30 Apr, 2015
+#     Matching string revised
+
 FCMD="AL: from CMD ->| "
 
 echo $FCMD"--Runing RVE"
@@ -16,7 +19,7 @@ done
 
 # Ensure this command run at root
 if [ x$CHECK_TYPE = 'xdrc' ] && [ ! -z $TOP_MODULE ]; then
-    for RESULT in `ls ./result/drcresult/ | grep ^$TOP_MODULE. | grep results` 
+    for RESULT in `ls ./result/drcresult/ | grep "^$TOP_MODULE\." | grep results` 
     do
         SUMMARY=$SUMMARY' ./result/drcresult/'$RESULT
     done

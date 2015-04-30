@@ -8,8 +8,11 @@
 # 28, Jan, 2015
 # v2: link library is added
 # 
-# 10, Arp, 2015
+# 10, Apr, 2015
 # Restruct the dictories, add bash script to handle sub task
+#
+# 30, Apr, 2015
+# No stream-out is needed if run all
 #
 # --- Load configuration file --
 include ./config
@@ -22,7 +25,6 @@ RVE_FILE = ''
 FCMD = "AL: from CMD ->| "
 
 # --- Command Start --
-all: drc-all lvs-all
 
 # --- Reset --
 # --- Display status --
@@ -139,6 +141,10 @@ run-lvs: streamout-gds export-cdl build-lvs-rule
 	cd $(LVS_RESULT_DIR) ;\
 		calibre -lvs -spice $(TOP_MODULE).lay.net -hier -turbo -nowait $(TOP_MODULE).lvs.rul > $(TOP_MODULE).lvs.log
 
+run-lvs-nostreamout: export-cdl build-lvs-rule
+	cd $(LVS_RESULT_DIR) ;\
+		calibre -lvs -spice $(TOP_MODULE).lay.net -hier -turbo -nowait $(TOP_MODULE).lvs.rul > $(TOP_MODULE).lvs.log
+
 run-drc: streamout-gds build-drc-rule
 	@cd $(DRC_RESULT_DIR) ;\
 	    for DRC_ in $(LINE) ;\
@@ -151,6 +157,10 @@ run-drc: streamout-gds build-drc-rule
 drc-all: run-drc run-rve-drc 
 
 lvs-all: run-lvs run-rve-lvs 
+
+lvs-all-nostreamout: run-lvs-nostreamout run-rve-lvs 
+
+all: drc-all lvs-all-nostreamout
 
 clean:
 	rm *.log *.setup -f
