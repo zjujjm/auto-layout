@@ -14,3 +14,9 @@ Author: Junmin Jiang
    make drc-all TOP_MODULE=XX
 5. For ALL:
    make all TOP_MODULE=XX
+
+## Updates:
+
+v2: 30 Apr, 2015
+1. runRVE: grep pattern revised to avoid submodules
+2. Makefile: action all do not need streamout again
